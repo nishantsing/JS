@@ -1,5 +1,43 @@
 # JS
 
+## Debugging
+
+- try to look for errors in chrome dev tools console.
+- put console.log statements 
+- using debugger keyword in code to trigger chrome dev tools debugger or you can also open the chrome dev tools sources find the file and put debug point.
+- resume: searches for next debug point or end of file (F8)
+- stepover: moves to next line(F10)
+- stepin: moves inside a fn, or loop or works as stepover if there is no function.(F11)
+- stepout: (F11)
+- step: works similar to stepin but works differently for async code where stepin will go inside the settimeout waiting for the time mentioned but step will follow the execution order.
+- pause on uncaught exceptions - checked
+- Call stack
+- breakpoint - click on the line of the file, without adding debugger statement in code.
+    - conditional breakpoint,trigger breakpoint, log breakpoint {variable_name}
+- Event Listener breakpoints, XHR/fetch breakpoints, DOM breakpoints, Global listeners.
+- Watch tab (any (multiple) variable name), instead can also check scope section.
+
+- debug in vscode.
+    - Run and Debug(Web Apps (Chrome))
+    - url where your site is running
+
+- network, perfoemance, application, lighthouse tabs
+
+## PWA
+
+- npm create solid
+- npm run dev
+- add manifesto file for pwa
+- register the manifest file in the app header(the starting index.html file).
+- defining and registering service worker in the same index.html file after the manifest registration.
+- Web APIs - Media Devices, Service Workers, Web Authentication Web components
+- [What PWA can do](https://whatpwacando.today/)
+- Feature (Media capture, geo location, deviceorientation, devicemotion, password auth, speech recognition)
+
+
+## Difference between display:none; and visibility:hidden;
+- display none also free the space taken by the element in UI while visibility hidden makes element hide in UI but the space is still taken by the element.
+
 
 ## Functions variants
 
