@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos</title>
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">
+                Todo List
+            </h1>
+            <form class="search">
+                <input type="text" class="form-control m-auto" name="search" placeholder="search todos">
+            </form>
+        </header>
+
+        <ul class="list-group mx-auto text-light todos">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Learn Programming</span>
+                    <i class="fa fa-trash delete">
+
+                    </i>
+                
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Eat food</span>
+                    <i class="fa fa-trash delete">
+
+                    </i>
+                
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Jog in Morning</span>
+                    <i class="fa fa-trash delete">
+
+                    </i>
+                
+            </li>
+        </ul>
+
+        <form class="add text-center my-4">
+            <label class="text-light">
+            Add a new todo...</label>
+            <input type="text" class="form-control m-auto" name="add">
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBzz5pfaGt47zZ3zDWMffz-WsRV_jpFPAc",
+            authDomain: "todo-8a912.firebaseapp.com",
+            databaseURL: "https://todo-8a912.firebaseio.com",
+            projectId: "todo-8a912",
+            storageBucket: "todo-8a912.appspot.com",
+            messagingSenderId: "544642646725",
+            appId: "1:544642646725:web:dd858fa045f9b76f3de6ac",
+            measurementId: "G-BJDMEQHPZW"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const db = firebase.firestore();
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>

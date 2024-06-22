@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            margin: 0;
+        }
+        h3{
+            padding:30px;
+            font-size: 36px;
+            color:white;
+            margin-left: 30px;
+        }
+        .container{
+            padding:24px;
+            border: 3px solid white;
+        }
+        h1{
+            color: white;
+            margin-left: 10px;
+        }
+        button{
+            padding-right: 6px;
+            border-radius: 50%;
+        }
+        #minus{
+            margin-left: 16px;
+        }
+        i{
+            margin-left: 8px;
+        }
+        
+
+       
+    </style>
+    <script src="https://kit.fontawesome.com/22f9e4efe0.js" crossorigin="anonymous"></script>
+   
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h3><span id="number">0</span></h3>
+        <div class="count">
+
+        </div>
+        <button style="font-size: 3em; color: Tomato;" id="plus"><i class="fas fa-plus"></i></button>
+        <button style="font-size: 3em; color: Tomato;" id="minus"><i class="fas fa-minus"></i></button>
+        
+
+    </div>
+
+    <script>
+        let count = 0;
+        const number = document.getElementById('number')
+        const plus = document.getElementById('plus')
+        const minus = document.getElementById('minus')
+        plus.addEventListener('click',(e)=>{
+           
+            count++;
+            number.innerHTML = count;
+            
+        })
+         minus.addEventListener('click', (e) => {
+                
+                count--;
+                number.innerHTML = count;
+
+            })
+
+    </script>
+</body>
+
+</html>

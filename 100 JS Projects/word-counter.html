@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            margin: 0;
+        }
+        h1{
+            height: 48px;
+        }
+        h3{
+            height: 48px;
+        }
+        span{
+            height: 48px;
+        }
+    </style>
+    <title>Word Counter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Word Counter</h1>
+        <h3>Type a word in the box</h3>
+        <textarea id="textarea" name="textarea" id="" cols="30" rows="10" placeholder="Enter..."></textarea>
+        <br>
+        <strong><span id="number"></span></strong>
+    </div>
+
+    <script>
+        let num = document.getElementById('number')
+        let textarea = document.getElementById('textarea')
+        let count = 1;
+        let flag = false;
+        
+        textarea.addEventListener('keyup', event => {                
+                // if(flag === false){
+                //     // console.log(count);
+                //     num.innerHTML= count;
+                //     flag =true;
+                //     count++;
+                // }
+                
+                // if (event.code === 'Space') {
+                //     flag = false;
+                // }
+                // if(event.code === 'Backspace'){
+                //     let total = document.getElementById('textarea').value
+                //     // alert(total)
+                //     let arr = total.split(" ")
+                //     // alert(arr)
+                //     count = arr.length;
+                //     // alert(arr.length)
+                //     num.innerHTML = arr.length;
+                    
+                // }
+
+                var str = document.getElementById('textarea').value
+                // str = str.trim()
+                // console.log(str);
+                // alert(total)
+                // Replacing regular expression represented by two or more spaces by a single space
+                // var tbh = str.replace(/[]{2,}/g,'')
+                var arr = str.split(" ")
+                console.log(arr);
+                arr = arr.filter(function (str) {
+                return /\S/.test(str);
+                 });
+                // Array.prototype.filter returns a new array, containing only the elements for which the function returns true(or a truthy value).
+
+                // /\S / is a regex that matches a non - whitespace character. /\S /.test(str) returns whether str has a non - whitespace character.
+
+                console.log(arr);
+                // console.log(arr);
+                // alert(arr)                
+                // alert(arr.length)
+                num.innerHTML = arr.length;
+            })
+    </script>
+</body>
+</html>
