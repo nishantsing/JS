@@ -1,5 +1,10 @@
 # JS
 
+## Searching Open source contribution
+- is:issue is:open label:"good first issue" language:JavaScript
+- is:issue is:open label:"help wanted" language:JavaScript
+- is:issue is:open label:"beginner" language:JavaScript
+
 ## Debugging
 
 - try to look for errors in chrome dev tools console.
