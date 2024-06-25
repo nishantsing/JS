@@ -28,6 +28,10 @@
 
 - network, perfoemance, application, lighthouse tabs
 
+## Memory Management
+
+- open your site in incognito mode.
+
 ## PWA
 
 - npm create solid
