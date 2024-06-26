@@ -48,6 +48,46 @@
 - display none also free the space taken by the element in UI while visibility hidden makes element hide in UI but the space is still taken by the element.
 
 
+
+## ES6 Class
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
+// Creating an instance of Person
+let person1 = new Person('Alice', 30);
+console.log(person1.greet()); 
+
+```
+
+## Constructor function
+
+```js
+// Constructor Function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Adding a method using prototype
+Person.prototype.greet = function() {
+  return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+}
+
+// Creating an instance of Person
+let person2 = new Person('Bob', 25);
+console.log(person2.greet()); 
+
+```
+
 ## Functions variants
 
 ### Function Declaration
