@@ -30,8 +30,51 @@
 
 ## Memory Management
 
-- open your site in incognito mode.
+- open your site in incognito mode.(No external extension memory)
 
+```js
+class Test{
+    constructor(name){
+        this.name = name
+    }
+}
+
+// Since these are in global scope they wont be cleaned by the garbage collector as they can be used in other places
+const globalTest = new Test("globalTest")
+const globalString = "globalString"
+
+
+{
+    //not global scope // locally scoped
+    const innerTest = new Test("innerTest") // cleaned
+    const innerString = "innerString" // not cleaned
+    console.log(innerTest.name)
+    console.log(innerString)
+    // as soon as we go out of this cope the variables innerTest will be garbage collected(cleaned from memory). object, arrays, class, function non- primitive
+    // while innerString stays forever as its primitive type
+}
+```
+- Memory Tab in chrome web tool,
+  - Heap Snapshot
+  - You can compare snapshots, by taking one at the beginning of program by putting debugger and by letting it pass and creating another snapshot.
+ 
+- Diff. b/w week and normal map and sets.
+  - week map will have garbage collector automatically clean keys for you.
+  - You cannot loop over week map and week set
+ 
+```js
+
+const map = new WeakMap()
+const outerObj = {i:-1}
+map.set(outerObj, "outer")
+let i =0
+
+setInterval(()=>{
+    const obj = {i} // as long as this in scope the key exists in map, it has to be obj as obj can be garbage collected.
+    map.set(obj, `Index ${i}`) // garbage collected can't be used out of set interval
+    i++
+},1)
+```
 ## PWA
 
 - npm create solid
