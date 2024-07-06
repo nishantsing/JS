@@ -90,7 +90,11 @@ setInterval(()=>{
 ## Difference between display:none; and visibility:hidden;
 - display none also free the space taken by the element in UI while visibility hidden makes element hide in UI but the space is still taken by the element.
 
+## Sets, Maps and JS Object
 
+- Sets(internally uses hash table like structure to store unique values) - like an array but don't store duplicate values....add, has, delete - methods, size - property , Iterable 
+- Maps Iterable(forEach, for ... of) keys can be of any type, insertion order is maintained....get, set, delete - methods, size - property
+- JS Object - Non Iterable(for...in, Object.keys(obj), Object.values, Object.entries)....only string and symbol as keys, if anything else converts to string, no order maintained.
 
 ## ES6 Class
 ```js
