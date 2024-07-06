@@ -5,6 +5,16 @@
 - is:issue is:open label:"help wanted" language:JavaScript
 - is:issue is:open label:"beginner" language:JavaScript
 
+## Power of JS
+- Threejs - 3D Visualization
+- React, Angular, Vue, Next - Web Development, PWA
+- React Native - Mobile Development
+- Phaser - Game development
+- Tensorflow - Machine Learning
+- Node - Server side development
+- Electron - Desktop App Development
+- D3 - Data Manipulation and Visulaization
+
 ## Debugging
 
 - try to look for errors in chrome dev tools console.
