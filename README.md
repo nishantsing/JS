@@ -1,5 +1,6 @@
 # JS
 
+
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
 - is:issue is:open label:"help wanted" language:JavaScript
@@ -85,6 +86,32 @@ setInterval(()=>{
     i++
 },1)
 ```
+
+## JS binding
+- If there is a function written named x inside a file f1, the x refers to f1 this context but I am calling x from f2(by not creating instacing but x was passed as argument in f2) which is passing its on this, how can I bind this of f1 to x?
+- In some setup or start method
+wherever in f1 x is accessible using this, we can add this.x = this.x.bind(this)
+
+```js
+// M1. bind this in f1
+x = ()=>{
+
+}.bind(this)
+
+
+// M2. bind this when calling x from f2 using f1 instance
+const instanceOfF1 = new f1();
+
+// Bind f1's this context to x when calling from f2
+instanceOfF1.x.bind(instanceOfF1)();
+
+// or
+// instanceOfF1.x.call(instanceOfF1);
+```
+## Cyclic Dependency
+
+- If f1 refers to cf1 then anything inside cf1 should not refer f1 or any dependency thats not common because it might create cyclic dependency.
+
 ## PWA
 
 - npm create solid
