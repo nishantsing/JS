@@ -126,3 +126,13 @@ console.log(longGreetings(sayHi, setGreetings, "John"));
 // Feature 5: Write a script that includes a HOFn to apply a given fn multiple times
 
 // see Activity 5 - HOFn takes a fn and a number and calls the fn that many times
+
+// Extra 1. Arguments array like object accessible isnide fns except arrow.
+
+function func(a, b, c) {
+    console.log(arguments[0]);
+}
+
+func(1, 2, 3);
+
+// Extra 2. Rest parameters ...args

@@ -8,4 +8,9 @@
 ## Day 3: Control Structures
 ## Day 4: Loops
 ## Day 5: Functions
+
+[MDN - rest parameters and more on functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 ## Day 6: Arrays
+## Day 7: Objects
+
+[MDN - read more about set and get in js object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
