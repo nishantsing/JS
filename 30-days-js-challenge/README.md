@@ -14,3 +14,5 @@
 ## Day 7: Objects
 
 [MDN - read more about set and get in js object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
+
+## Day 8: ES6+ Features
