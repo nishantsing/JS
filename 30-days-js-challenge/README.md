@@ -16,3 +16,7 @@
 [MDN - read more about set and get in js object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
 ## Day 8: ES6+ Features
+
+## Day 9: DOM Manipulation
+
+- Learn more about the DOM manipulation and also animation, translation
