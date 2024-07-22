@@ -17,6 +17,6 @@
 
 ## Day 8: ES6+ Features
 
-## Day 9: DOM Manipulation
+## Day 9/10: DOM Manipulation/ Event Handling
 
 - Learn more about the DOM manipulation and also animation, translation

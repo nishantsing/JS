@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation</title>
-    <script src="./day9.js" defer></script>
+    <script src="./day9_10.js" defer></script>
 </head>
 
 <style>
     .dark{
         background-color: black;
         color: white;
+    }
+    .color_element{
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
     }
 </style>
 <body>
@@ -28,7 +33,21 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Clouds_at_Sunset.jpeg" alt="sunset" width="200px">
     <button class="change_image">Change Image</button>
     <button class="toggle_dark_mode">Toggle Dark Mode</button>
+    <div class="color_element"></div>
     </div>
+    <form>
+        <input type="text" name="name" placeholder="Enter text and see in console" class="input_field">
+        <input type="submit">
+    </form>
+    <p class="result"></p>
+
+    <label for="options">Choose an option:</label>
+    <select id="options">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
     
+    <p id="selectedValue">Selected value: </p>
 </body>
 </html>
