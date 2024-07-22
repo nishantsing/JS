@@ -1,5 +1,6 @@
 # JS
 
+- codeium a tool similar to github copilot
 
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
