@@ -19,4 +19,7 @@
 
 ## Day 9/10: DOM Manipulation/ Event Handling
 
-- Learn more about the DOM manipulation and also animation, translation
+- Learn more about the DOM manipulation and also animation, translation.
+
+## Day 11: Promises and Async/Await
+
