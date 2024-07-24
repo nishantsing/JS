@@ -23,3 +23,5 @@
 
 ## Day 11: Promises and Async/Await
 
+## Day 12. Error Handling
+
