@@ -25,3 +25,36 @@
 
 ## Day 12. Error Handling
 
+## Day 13. Modules
+
+- 2 common ways commonjs and named(es6)
+
+- commonjs is the default
+- To unable Es6 you need to initialize npm init -y and add "type":"module" in package.json file.
+
+- Use a module bundler like Webpack or Parcel to bundle multiple JS files into a single file. write a script to demonstrate the bundling process
+
+    - npm install -D webpack webpack-cli
+    - webpack.config.js
+    ```js
+    const path = require('path');
+
+    module.exports = {
+        entry: './src/index.js', // source file
+        output: {
+            filename: 'bundle.js',
+            path: path.resolve(__dirname, 'dist')
+        },
+        mode: 'development'
+    };
+
+    ```
+    - update package.json
+    ```json
+
+    "scripts": {
+        "build": "webpack"
+    }
+
+    ```
+    - npm run build

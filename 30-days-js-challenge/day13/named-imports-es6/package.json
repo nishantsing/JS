@@ -1,0 +1,21 @@
+{
+    "name": "named-imports-es6",
+    "version": "1.0.0",
+    "description": "",
+    "main": "day13.js",
+    "type": "module",
+    "scripts": {
+        "build": "webpack"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.7.2",
+        "lodash": "^4.17.21"
+    },
+    "devDependencies": {
+        "webpack": "^5.93.0",
+        "webpack-cli": "^5.1.4"
+    }
+}
