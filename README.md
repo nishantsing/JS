@@ -1,6 +1,7 @@
 # JS
 
 - codeium a tool similar to github copilot
+- [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
 
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript

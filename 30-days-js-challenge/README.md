@@ -58,3 +58,11 @@
 
     ```
     - npm run build
+
+## Day 14. Classes
+
+- creating class with properties and method
+- extending that class using other class
+- creating static method and properties in a class
+- getter and setter for class
+- private property in class
