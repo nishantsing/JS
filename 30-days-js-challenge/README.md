@@ -66,3 +66,5 @@
 - creating static method and properties in a class
 - getter and setter for class
 - private property in class
+
+## Day 15. Closures 
