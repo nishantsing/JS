@@ -69,3 +69,10 @@
 
 ## Day 15. Closures 
 ## Day 16. Recursion
+
+
+## checkout Flows in PostMan
+- [Flows Postman - Hitesh YT](https://youtu.be/73xrwXL_DMA)
+- try it pretty interesting.
+
+## Day 17. Data Structures
