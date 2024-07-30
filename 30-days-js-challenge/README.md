@@ -76,3 +76,4 @@
 - try it pretty interesting.
 
 ## Day 17. Data Structures
+## Day 18. Algorithms
