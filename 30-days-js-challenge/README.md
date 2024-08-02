@@ -77,3 +77,15 @@
 
 ## Day 17. Data Structures
 ## Day 18. Algorithms
+## Day 19. Regular Expression.
+## Day 20. Local Storage abd Session Storage
+    - IndexedDB, cookies
+
+#### localStorage/sessionStorage
+#### .setItem(key, value) - value should be string
+#### .getItem(key); - returns string
+#### .removeItem(key)
+#### .clear()
+
+
+## Day 21. LeetCode Easy

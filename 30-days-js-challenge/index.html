@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation</title>
     <script src="./day9_10.js" defer></script>
+    <script src="./day20/day20.js" defer></script>
 </head>
 
 <style>
@@ -16,6 +17,18 @@
         width: 50px;
         height: 50px;
         background-color: aqua;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: auto;
+    }
+    .input_styled {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        box-sizing: border-box;
     }
 </style>
 <body>
@@ -49,5 +62,33 @@
     </select>
     
     <p id="selectedValue">Selected value: </p>
+
+     <div class="container">
+        <h1>Save User Data</h1>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required class="input_styled">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="input_styled">
+            <button type="submit" class="input_styled">Save</button>
+        </form>
+        <div id="savedData">
+            <h2>Saved Data:</h2>
+            <p id="displayName"></p>
+            <p id="displayEmail"></p>
+        </div>
+        <h1>Remove Item from Local Storage</h1>
+        <button id="removeButton" class="input_styled">Remove Item</button>  
+
+        <h1>Save and Retrieve Storage Example</h1>
+        <button id="saveButton" class="input_styled">Save to Both Storages</button>
+        <p id="output"></p>
+
+        <h1>Clear Storage Example</h1>
+        <button id="clearButton" class="input_styled">Clear All Storage</button>
+        <p id="localStorageStatus"></p>
+        <p id="sessionStorageStatus"></p>
+
+    </div>
 </body>
 </html>
