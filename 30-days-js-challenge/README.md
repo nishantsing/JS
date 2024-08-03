@@ -89,3 +89,15 @@
 
 
 ## Day 21. LeetCode Easy
+## Day 22. Day 21. LeetCode Easy
+
+
+## Inspect disaapearing element
+
+- create a snippet in browser name it something
+```js
+setTimeout(()=>{
+    debugger
+}, 3000)
+```
+- run it and do whatever you want(tootlip hover)
