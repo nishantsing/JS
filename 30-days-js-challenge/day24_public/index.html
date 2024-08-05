@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            background: linear-gradient(to right, #f0f0f0, #dcdcdc);
+        }
+        img{
+            width: 100px;
+            align-self: center;
+        }
+        button{
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            padding: 12px;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            margin: 10px;
+        }
+        /* img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        } */
+
+        input {
+            margin: 10px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 25%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+        .weather-status-container, .forecast-container{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 16px;
+            background: linear-gradient(to right, #a2c2e0, #e0f7ff);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 280px;
+            max-width: 100%;
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+        }
+        .weather-status-container:hover, .forecast-container:hover {
+            transform: translateY(-10px);
+        }
+        .forecast-container{
+            width: 200px;
+            text-align: center;
+        }
+        .fields{
+            display: flex;
+            align-items: center;
+        }
+
+        .weather-fields{
+            display: flex;
+            align-items: center;
+        }
+
+        .forecast-display{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+         <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">Weather App</a>
+            </div>
+        </nav>
+        
+        <form action="">
+            <input type="text" placeholder="Enter City" id="city-input">
+            <button>Search</button>
+        </form>
+        <div class="weather-status-container">
+            <div class="textContainer">
+                <div class="fields">
+                <span>City: </span>
+                <h4 class="" id="city-name"></h4>
+            </div>
+            <div class="fields">
+                <span>Temp: </span>
+                <h4 class="" id="temp"></h4>
+            </div>
+            <div class="fields">
+                <span>Weather: </span>
+                
+                <div class="weather-fields">
+                    <h4 class="" id="weather"></h4>
+                    <!-- <h4 class="" id="weather-description"></h4> -->
+                </div>
+                
+            </div>
+            </div>
+            
+            <img src="">
+            
+        </div>
+         
+        <button id="forecast">Display 5-Day Forecast</button>
+        <div class="forecast-display"></div>
+
+        
+    </div>
+
+
+    <script>
+        const WEATHER_APIKEY =''; // Add the openweathermap api key 
+        const city = document.querySelector("#city-name");
+        const temp = document.querySelector("#temp");
+        const weather = document.querySelector("#weather");
+        const form = document.querySelector("form")
+        const img = document.querySelector("img")
+        const inputCity = document.querySelector("#city-input");
+        const showForecast = document.querySelector("#forecast");
+        const displayForecast = document.querySelector(".forecast-display");
+        
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            if(!inputCity.value){
+                alert("Please enter a city name before searching!!!")
+                
+            }else{
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&appid=${WEATHER_APIKEY}&units=metric`
+                sendRequest(url)
+                inputCity.value = ""
+            }
+
+            
+
+        })
+
+        showForecast.addEventListener("click",(e)=>{
+            const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city.innerText}&appid=${WEATHER_APIKEY}&units=metric`
+            sendRequest(forecastUrl, true)
+            
+        })
+        // const weatherIcon = document.querySelector("#weather-icon");
+        // const weatherDescription = document.querySelector("#weather-description");
+        
+
+        const sendRequest = async (uri, isForecast)=>{
+            try {
+                const response = await fetch(uri);
+                const data = await response.json()
+                if(data.cod ===  "404") {
+                    alert(data.message)
+                    return
+                }
+                console.log(data);
+                setData(data, isForecast)
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=pune&appid=${WEATHER_APIKEY}&units=metric`
+
+        sendRequest(url)
+
+        const setData = (data, isForecast) =>{
+            
+            if(isForecast){
+                if(displayForecast.hasChildNodes()){
+                    displayForecast.innerHTML = '';
+                }
+                data.list.forEach((item, idx)=>{
+                    if(idx%8 == 0){ // 0, 8 ,16 ,24,32, 40
+                        const day = idx / 8; 
+                        let dayType = ""
+                        switch(day){
+                            case 0: 
+                                dayType = "Today"
+                                break
+                            case 1: 
+                                dayType = "Tommorrow"
+                                break
+                            case 2: 
+                                dayType = "Day 3"
+                                break
+                            case 3: 
+                                dayType = "Day 4"
+                                break
+                            case 4: 
+                                dayType = "Day 5"
+                                break
+                            case 5: 
+                                dayType = "Day 6"
+                                break
+                        }
+                        const div = document.createElement("div");
+                        div.classList.add("forecast-container");
+                        const forecastText = document.createElement("div");
+                        forecastText.classList.add("forecast-text")
+                        const h3 = document.createElement("h3");
+                        h3.innerText = dayType
+                        forecastText.append(h3)
+                        const p = document.createElement("p");
+                        p.innerText = item.weather[0].main
+                        forecastText.append(p)
+                        const img = document.createElement("img");
+                        img.src = `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`
+                        div.append(forecastText)
+                        div.append(img)
+                        displayForecast.append(div)
+                        
+                    }
+                })
+            }else{
+                city.textContent = data.name ?? data.city.name
+                temp.textContent = data.main ? data.main.temp : data.list[0].main.temp
+                weather.textContent = data.weather ? data.weather[0].main : data.list[0].weather[0].main
+                img.src =`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+                // weatherIcon.textContent = data.weather[0].icon
+                // weatherDescription.textContent = data.weather ? data.weather[0].description : data.list[0].weather[0].description
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>
