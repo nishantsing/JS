@@ -89,7 +89,9 @@
 
 
 ## Day 21. LeetCode Easy
-## Day 22. Day 21. LeetCode Easy
+## Day 22. LeetCode Medium
+## Day 23. LeetCode Hard
+## Day 24. Project 1 - Weather App
 
 
 ## Inspect disaapearing element

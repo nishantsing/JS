@@ -221,3 +221,42 @@ namesList.addEventListener("click", function (event) {
 // :nth-child(even): Selects elements at even positions among their siblings.
 
 // Extra 3. Learn more about the DOM manipulation and also animation, translation
+
+// E4. Event Delegation
+
+// button to create boxes and once you click on those boxes they print something on screen, when you start you have 3 div boxes in html code.
+
+addBoxButton.addEventListener("click", () => {
+    const box = document.createElement("div");
+    box.classList.add("box");
+    grid.append(box);
+});
+
+//avoid puttin event on specific boxes as the newly create boxes wont have those event, and even if you add the event while creating those div boxes, you need to do it everplace repeating code.
+
+boxes.forEach((box) => {
+    box.addEventListener("click", (e) => {
+        console.log("clicked");
+    });
+});
+
+// instead use this, the event is delegated all the way from parent document to the div inside them, and will work for newly created boxes as well as the boxes existing.
+document.addEventListener("click", (e) => {
+    if (e.target.matches(".box")) {
+        console.log("clicked");
+    }
+});
+
+// making it more global
+function addGlobalEvenListener(type, selector, callback, parent = document) {
+    // instead of document you can use some other parent element where you want to apply this and use event delegation.
+    parent.addEventListener(type, (e) => {
+        if (e.target.matches(selector)) {
+            callback(e);
+        }
+    });
+}
+
+addGlobalEvenListener("click", ".box", (e) => {
+    console.log("clicked");
+});
