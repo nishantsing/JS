@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <style>
+        body{
+            background: linear-gradient(to right, #f0f0f0, #dcdcdc);
+        }
+        img{
+            width: 100px;
+            align-self: center;
+        }
+        button{
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            padding: 12px;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            margin: 10px;
+        }
+        /* img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        } */
+
+        input {
+            margin: 10px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 25%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .movie-container{
+            display: flex;
+        }
+
+        /* Card container */
+        .card {
+            display: flex;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 426px;
+            width: 100%;
+            margin: 10px;
+        }
+
+        /* Card image */
+        .card-image {
+            width: 50%;
+            height: auto;
+            display: block;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 16px;
+        }
+
+        /* Card title */
+        .card-title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Card text */
+        .card-text {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Card button */
+        .card-button {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #0056b3;
+        }
+
+
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+                background-color: #fefefe;
+            /* margin: auto 20%; */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            height: 89%;
+            margin-left: 40%;
+            margin-top: 1%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Modal Header */
+        .modal-header {
+            padding: 2px 16px;
+            height: 10%;
+            /* background-color: #5cb85c; */
+            color: #000;
+        }
+
+        /* Modal Body */
+        .modal-body {
+            position: relative;
+            padding: 2px 16px;
+            height: 80%;
+            img{
+                position: absolute;
+                top: 0;
+                right: 50px;
+            }
+        }
+
+        /* Modal Footer */
+        .modal-footer {
+            padding: 2px 16px;
+            /* background-color: #5cb85c; */
+            color: white;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">Movie App</a>
+            </div>
+        </nav>
+        
+        <form action="">
+            <input type="text" placeholder="Enter Movie Name" id="movie-name-input">
+            <button>Search</button>
+        </form>
+        <div class="movie-container">
+            <!-- <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Card Title</h2>
+                <p class="card-text">This is some text inside the card. It provides additional information or details about the card.</p>
+            </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2></h2>
+            </div>
+            <div class="modal-body">
+                <p>This is the body of the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="closeModalBtn">Close</button>
+            </div>
+        </div>
+
+        <script>
+            // OMDb API or TMDB API
+            // We will be using OMDb API
+
+            const API_KEY = ""; // Get your OMDb API key
+            let movieCache = {};
+            const movieContainer = document.querySelector(".movie-container");
+            const form = document.querySelector("form");
+            const movieInput = document.querySelector("#movie-name-input");
+            // Get the modal
+            const modal = document.getElementById("myModal");
+            // Get the <span> element that closes the modal
+            const closeBtn = document.querySelector(".close");
+
+            // Get the button that closes the modal (footer button)
+            const closeModalBtn = document.getElementById("closeModalBtn");
+
+            const modalHeader = document.querySelector(".modal-header h2");
+
+            const modalBody = document.querySelector(".modal-body p");
+
+            function getRandomLetter() {
+                // Generate a random number between 0 and 25
+                const randomIndex = Math.floor(Math.random() * 26);
+
+                // Convert this number to a letter in the range 'a' to 'z'
+                const randomLetter = String.fromCharCode(97 + randomIndex);
+
+                return randomLetter;
+            }
+
+            const sendRequest = async (uri) => {
+                try {
+                    const response = await fetch(uri);
+                    const data = await response.json();
+                    if (data.cod === "404") {
+                        alert(data.message);
+                        return;
+                    }
+                    console.log(data);
+                    return data;
+                } catch (error) {
+                    console.log(error.message);
+                }
+            };
+
+            const setData = (movie) => {
+                movieCache = movie;
+                // data.forEach((movie) => {
+                if (movieContainer.hasChildNodes()) {
+                    movieContainer.innerHTML = "";
+                }
+                const div = document.createElement("div");
+                div.classList.add("card");
+                const img = document.createElement("img");
+                img.src = movie.Poster;
+                img.classList.add("card-image");
+                const cardContent = document.createElement("div");
+                cardContent.classList.add("card-content");
+                const h2 = document.createElement("h2");
+                h2.classList.add("card-title");
+                h2.innerText = movie.Title;
+                const p = document.createElement("p");
+                p.classList.add("card-text");
+                p.innerText = movie.Plot;
+                const a = document.createElement("a");
+                a.classList.add("card-button");
+                a.innerText = "Read More";
+                a.onclick = function () {
+                    modal.style.display = "block";
+                    modalHeader.innerText = movieCache.Title;
+                    const img = document.createElement("img");
+                    let string = ``;
+                    for (let key in movieCache) {
+                        if (key === "Poster") {
+                            img.src = movieCache[key];
+                        } else {
+                            string += `${key}: ${movieCache[key]}\n`;
+                        }
+                    }
+                    const parent = modalBody.parentElement;
+                    modalBody.innerText = string;
+                    parent.appendChild(img);
+                };
+                movieContainer.append(div);
+                div.append(img);
+                div.append(cardContent);
+                cardContent.append(h2);
+                cardContent.append(p);
+                cardContent.append(a);
+                // });
+            };
+
+            async function getBasicData() {
+                const randomAlphabet = getRandomLetter();
+                const year = new Date().getFullYear();
+                const url = `http://www.omdbapi.com/?apikey=${API_KEY}&t=${randomAlphabet}&y=${year}`;
+                const data = await sendRequest(url);
+                setData(data);
+            }
+
+            getBasicData();
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                if (!movieInput.value) {
+                    alert("Please enter a movie name before searching!!!");
+                } else {
+                    const url = `http://www.omdbapi.com/?apikey=${API_KEY}&t=${movieInput.value}`;
+                    const data = await sendRequest(url);
+                    setData(data);
+                    movieInput.value = "";
+                }
+            });
+
+            // When the user clicks on <span> (x), close the modal
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // When the user clicks on the "Close" button in the footer, close the modal
+            closeModalBtn.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+
+        </script>
+</body>
+</html>

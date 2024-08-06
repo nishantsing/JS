@@ -92,6 +92,7 @@
 ## Day 22. LeetCode Medium
 ## Day 23. LeetCode Hard
 ## Day 24. Project 1 - Weather App
+## Day 25. Project 2 - Movie App
 
 
 ## Inspect disaapearing element
