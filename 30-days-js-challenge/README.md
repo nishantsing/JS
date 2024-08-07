@@ -93,6 +93,9 @@
 ## Day 23. LeetCode Hard
 ## Day 24. Project 1 - Weather App
 ## Day 25. Project 2 - Movie App
+## Day 26. Project 3 - Chat App
+- we can use ws npm library for building backend server and WebSocket for making client.
+- socket.io provides an easy interface for building server and client as well
 
 
 ## Inspect disaapearing element

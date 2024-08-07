@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        #app {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            height: 100%;
+            max-height: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+        #chat-container {
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        .message {
+            margin-bottom: 12px;
+            padding: 10px;
+            border-radius: 4px;
+            background: #e1f5fe;
+        }
+        .message.user {
+            background: #c8e6c9;
+            text-align: right;
+        }
+        .username {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .typing {
+            font-style: italic;
+            color: #888;
+        }
+        #controls {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background: #fff;
+        }
+        #controls input, #controls button {
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        #controls input {
+            flex: 1;
+        }
+        #controls button {
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        #controls button:hover {
+            background: #0056b3;
+        }
+        #room-controls {
+            display: flex;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+        }
+        #room-controls input, #room-controls button {
+            border: none;
+            padding: 7px;
+            border-radius: 4px;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        #room-controls input {
+            flex: 1;
+        }
+        #room-controls button {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        #room-controls button:hover {
+            background: #218838;
+        }
+        @media (max-width: 600px) {
+            #controls, #room-controls {
+                flex-direction: column;
+            }
+            #controls input, #controls button, #room-controls input, #room-controls button {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            #controls button, #room-controls button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="room-controls">
+            <input id="usernameInput" type="text" placeholder="Enter username">
+            <input id="roomIdInput" type="text" placeholder="Enter room ID">
+            <button id="joinButton">Join Room</button>
+        </div>
+        <div id="chat-container"></div>
+        <div id="controls">
+            <input id="messageInput" type="text" placeholder="Type a message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script>
+        let ws;
+        let roomId = '';
+        let username = '';
+
+        document.getElementById('joinButton').onclick = () => {
+            username = document.getElementById('usernameInput').value.trim();
+            roomId = document.getElementById('roomIdInput').value.trim();
+            if (username && roomId) {
+                ws = new WebSocket(`ws://localhost:8080?roomId=${roomId}`);
+                
+                ws.onopen = () => {
+                    console.log('WebSocket connection established');
+                    ws.send(JSON.stringify({ type: 'setUsername', username: username }));
+                };
+
+                ws.onmessage = (event) => {
+                    const parsedMessage = JSON.parse(event.data);
+                    const chatContainer = document.getElementById('chat-container');
+
+                    if (parsedMessage.type === 'chatMessage') {
+                        const messageElement = document.createElement('div');
+                        messageElement.className = 'message';
+                        if (parsedMessage.username === username) {
+                            messageElement.classList.add('user');
+                        }
+                        messageElement.innerHTML = `<span class="username">${parsedMessage.username}:</span> ${parsedMessage.message}`;
+                        chatContainer.appendChild(messageElement);
+                        chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+                    } else if (parsedMessage.type === 'typing') {
+                        const typingElement = document.getElementById('typing');
+                        if (!typingElement) {
+                            const newTypingElement = document.createElement('div');
+                            newTypingElement.id = 'typing';
+                            newTypingElement.className = 'typing';
+                            newTypingElement.textContent = `${parsedMessage.username} is typing...`;
+                            chatContainer.appendChild(newTypingElement);
+                            chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+                        } else {
+                            typingElement.textContent = `${parsedMessage.username} is typing...`;
+                        }
+
+                        // Remove typing notification after 3 seconds
+                        setTimeout(() => {
+                            const typingElement = document.getElementById('typing');
+                            if (typingElement) typingElement.remove();
+                        }, 3000);
+                    }
+                };
+
+                ws.onerror = (error) => {
+                    console.error('WebSocket error:', error);
+                };
+
+                ws.onclose = () => {
+                    console.log('WebSocket connection closed');
+                };
+            } else {
+                alert('Please enter both username and room ID.');
+            }
+        };
+
+        
+
+
+        const sendMessage = ()=>{
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            if (message && ws) {
+                // Create and display the message immediately
+                const chatContainer = document.getElementById('chat-container');
+                const messageElement = document.createElement('div');
+                messageElement.className = 'message user'; // Style as user message
+                messageElement.innerHTML = `<span class="username">${username}:</span> ${message}`;
+                chatContainer.appendChild(messageElement);
+                chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+                
+                // Send the message to the server
+                ws.send(JSON.stringify({ type: 'chatMessage', message }));
+
+                // Clear the input field
+                messageInput.value = '';
+            }
+        }
+
+        document.getElementById('sendButton').onclick = sendMessage
+         document.getElementById('messageInput').addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission if in a form
+                sendMessage();
+            }
+        });
+
+        document.getElementById('messageInput').addEventListener('input', () => {
+            if (ws) {
+                ws.send(JSON.stringify({ type: 'typing', username: username }));
+            }
+        });
+    </script>
+</body>
+</html>
