@@ -1,3 +1,9 @@
+
+
+### Improvements
+- chats can be stored to db using mongoose ORM.
+
+### Deployment
 - ws for local development
 - wss for production
 - "start": "node server.js"

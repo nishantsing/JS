@@ -1,0 +1,224 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main section styling */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Task input section styling */
+#task-input {
+    margin-bottom: 20px;
+}
+
+#task-input h2 {
+    margin-bottom: 10px;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Task list section styling */
+#task-list {
+    margin-top: 20px;
+}
+
+#task-list h2 {
+    margin-bottom: 10px;
+}
+
+ul#tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#tasks li {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Task list section styling */
+
+.task-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.task-form-group{
+    display: flex;
+}
+#task-list {
+    margin-top: 20px;
+}
+
+#task-list h2 {
+    margin-bottom: 10px;
+}
+
+/* Task list ul styling */
+ul#tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Task list item styling */
+ul#tasks li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+ul#tasks li:hover {
+    background: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-item {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.task-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.task-item span {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Additional styling for completed tasks */
+.task-item.completed {
+    background: #e6ffe6;
+    border-color: #c1eac5;
+    color: #3c763d;
+    text-decoration: line-through;
+}
+
+
+/* Edit button styling */
+.task-item button.edit-btn {
+    background: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.task-item button.edit-btn:hover {
+    background: #0056b3;
+}
+
+
+/* Delete button styling */
+.task-item button.delete-btn {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px; /* Add space between edit and delete buttons */
+    transition: background-color 0.3s;
+}
+
+.task-item button.delete-btn:hover {
+    background: #c82333;
+}
