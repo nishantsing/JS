@@ -97,6 +97,8 @@
 - we can use ws npm library for building backend server and WebSocket for making client.
 - socket.io provides an easy interface for building server and client as well
 
+## Day 27. Project 4 - Task management
+## Day 28. Project 5 - E commerce
 
 ## Inspect disaapearing element
 

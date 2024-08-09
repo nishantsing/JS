@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": 79.99,
+        "description": "High-quality wireless headphones with noise-cancelling features and long battery life.",
+        "imageUrl": "https://example.com/images/wireless-headphones.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Smartphone X Pro",
+        "price": 699.99,
+        "description": "Latest smartphone with a stunning display, powerful processor, and advanced camera system.",
+        "imageUrl": "https://example.com/images/smartphone-x-pro.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Bluetooth Speaker",
+        "price": 49.99,
+        "description": "Portable Bluetooth speaker with excellent sound quality and waterproof design.",
+        "imageUrl": "https://example.com/images/bluetooth-speaker.jpg"
+    },
+    {
+        "id": 4,
+        "name": "4K Smart TV",
+        "price": 899.99,
+        "description": "Ultra HD 4K Smart TV with integrated streaming apps and high dynamic range.",
+        "imageUrl": "https://example.com/images/4k-smart-tv.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Fitness Tracker",
+        "price": 29.99,
+        "description": "Fitness tracker with heart rate monitoring, step counting, and sleep tracking features.",
+        "imageUrl": "https://example.com/images/fitness-tracker.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Laptop Backpack",
+        "price": 39.99,
+        "description": "Durable and stylish backpack designed to carry laptops up to 15 inches and other essentials.",
+        "imageUrl": "https://example.com/images/laptop-backpack.jpg"
+    }
+]
