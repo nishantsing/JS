@@ -1,0 +1,46 @@
+<!-- feed.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts Feed</title>
+    <link rel="stylesheet" href="styles/feed.css">
+    <script src="scripts/feed.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Posts Feed</h1>
+            
+        </header>
+
+        <main id="feed-content">
+            <section class="posts">
+                <div id="posts-container"></div>
+            </section>
+        </main>
+
+        <!-- Modal Structure -->
+        <div id="commentModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h3>Add a Comment</h3>
+                <form id="commentForm">
+                    <textarea id="commentInput" placeholder="Write a comment..." rows="4" cols="50"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+                <h2>Comments</h2>
+                <div id="commentsContainer">
+                    <!-- Comments will be displayed here -->
+                </div>
+                
+            </div>
+        </div>
+        <a href="index.html" class="back-link">Back to Dashboard</a>
+        <footer>
+            <p>&copy; 2024 Social Media Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

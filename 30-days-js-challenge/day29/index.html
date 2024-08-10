@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Social Media Dashboard</h1>
+            <a href="authentication/login.html" class="view-feed-link">Go to Login</a>
+        </header>
+
+        <main id="main-content">
+            <section id="dashboard-section" class="dashboard">
+                <section class="post-form">
+                    <h2>Create a New Post</h2>
+                    <form id="new-post-form">
+                        <label for="post-text">Text:</label>
+                        <textarea id="post-text" placeholder="What's on your mind?" required></textarea>
+
+                        <label for="post-image">Image URL (optional):</label>
+                        <input type="url" id="post-image" placeholder="Enter image URL">
+
+                        <button type="submit">Post</button>
+                    </form>
+                </section>
+                <a href="feed.html" class="view-feed-link">View Posts Feed</a>
+                <section class="posts">
+                    <h2>Post</h2>
+                    <div id="posts-container"></div>
+                </section>
+
+                
+                
+            </section>
+        </main>
+
+
+        <footer>
+            <p>&copy; 2024 Social Media Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>
