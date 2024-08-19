@@ -138,7 +138,7 @@
             username = document.getElementById('usernameInput').value.trim();
             roomId = document.getElementById('roomIdInput').value.trim();
             if (username && roomId) {
-                ws = new WebSocket(`wss://chat-app-andl.onrender.com:8080?roomId=${roomId}`);
+                ws = new WebSocket(`wss://chat-app-andl.onrender.com?roomId=${roomId}`);
                 
                 ws.onopen = () => {
                     console.log('WebSocket connection established');
