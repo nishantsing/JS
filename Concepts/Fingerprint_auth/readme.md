@@ -50,6 +50,9 @@ navigator.credentials.get({ publicKey })
 
 
 //login
+// 1. get challenge from server
+// 2. Get passkey 
+// 3. Verify passkey in DB
 
 ```
 
@@ -57,6 +60,13 @@ navigator.credentials.get({ publicKey })
 - using npm i @simplewebauthn/server
 
 ```js
+// signup
+app.get("/init-register")
+app.post("/verify-register")
 
+
+// login
+app.get("/init-auth")
+app.post("/verify-register")
 
 ```
