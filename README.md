@@ -3,6 +3,7 @@
 - codeium a tool similar to github copilot
 - [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
 
+
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
 - is:issue is:open label:"help wanted" language:JavaScript
@@ -393,3 +394,16 @@ asyncFn()
   ```
 
 -  To handle errors in async await you have to wrap your code in try and catch with finally if required.
+
+
+# CSS
+console.log of css
+```css
+*{
+    outline: 1px solid limegreen !important;
+}
+//OR
+*{
+    background: rgb(0 100 0 / 0.1) !important;
+}
+```
