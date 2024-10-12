@@ -9,6 +9,20 @@
 - is:issue is:open label:"help wanted" language:JavaScript
 - is:issue is:open label:"beginner" language:JavaScript
 
+#### Doing Open Source contribution
+
+- get the issue assigned to urself.
+- fork the repo
+- git clone <url> (url of the forked repo)
+- follow the installation step mentioned in readme of the repo
+- fix the issue
+- git checkout -b "fix/<branchname>" (dont promote on the main branch, always create a branch)
+- git add .
+- git commit -m ""
+- git push
+- compare and pull request
+- Title (Bug Fix: ), description
+
 ## Power of JS
 - Threejs - 3D Visualization
 - React, Angular, Vue, Next - Web Development, PWA
