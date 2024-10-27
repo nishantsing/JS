@@ -33,6 +33,14 @@
 - Electron - Desktop App Development
 - D3 - Data Manipulation and Visulaization
 
+
+## Mistakes to avoid
+- Avoid nested ifs, check failure conditions and exit if it mets. There will be muliple ifs instead of nested ifs.(Avoid unnecessary complexity).
+- Too much functionality being handled in a single function, each function should have one job.(Single responsibility).
+- Difference between primitive types(String, number, boolean, null, undefined) and non-primitive(object, array, functions, map, set). In primitive type we deal with actual values, but with object we deal with references. Instead of asssigning one object to other use spread operator to create new objects.
+- Using many eventlistener instead of event delegation. Add one event listener to parent element(e.target can be used to match the child) and event delegation can be used instead of each child element.
+- overusing foreach instead of using other array methods like filter and map.
+
 ## Debugging
 
 - try to look for errors in chrome dev tools console.
