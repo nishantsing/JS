@@ -40,6 +40,32 @@
 - Difference between primitive types(String, number, boolean, null, undefined) and non-primitive(object, array, functions, map, set). In primitive type we deal with actual values, but with object we deal with references. Instead of asssigning one object to other use spread operator to create new objects.
 - Using many eventlistener instead of event delegation. Add one event listener to parent element(e.target can be used to match the child) and event delegation can be used instead of each child element.
 - overusing foreach instead of using other array methods like filter and map.
+- difference between for of and for in loops
+
+- Use Object.freeze(objectName) to freeze the config objects or immutable objects, keep in mind it only freezes the top level object and not the nested objects as value in the object - In strict mode "use strict" throws an error and in not strict mode ignores.
+
+
+- instead of checking equality here check for greater or less than a threshold
+
+```js
+const num = 0.1 + 0.2
+
+//DONT USE
+if(num === 0.3) issue as num is 0.30000000000004
+
+// USE
+Math.abs(num - 0.3) < Number.EPSILON
+```
+
+
+- how to check if a variable is actually an object
+```js
+const x = {}
+if(typeof x === "object" && x!== null && !Array.isArray(x))
+```
+
+- overusing arrow fns and running into "this" problem - use arrow fn in top level.
+- overusing optional chaining - to avoid errors that needs to be thrown
 
 ## Debugging
 
