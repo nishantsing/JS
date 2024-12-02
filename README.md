@@ -67,6 +67,9 @@ if(typeof x === "object" && x!== null && !Array.isArray(x))
 - overusing arrow fns and running into "this" problem - use arrow fn in top level.
 - overusing optional chaining - to avoid errors that needs to be thrown
 
+## Dealing with JS like a pro
+- when dealing with libraries(like library for database, auth) while using library functions try to abstract them into your functions if the library function is used in multiple pages, it provides ease of updation.(adapter and facade style patterns)
+
 ## Debugging
 
 - try to look for errors in chrome dev tools console.
