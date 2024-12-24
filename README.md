@@ -447,6 +447,25 @@ asyncFn()
 -  To handle errors in async await you have to wrap your code in try and catch with finally if required.
 
 
+### Freezing an object
+
+```js
+const obj = {
+  name: "Alice",
+  age: 30
+};
+
+Object.freeze(obj);
+
+// Attempting to modify the object
+obj.age = 31; // This will have no effect in strict mode, and silently fail in non-strict mode
+
+console.log(obj.age); // Still 30
+
+```
+- Shallow Freeze: Object.freeze() only performs a shallow freeze. If your object contains nested objects, the nested objects themselves won't be frozen. You'll need to recursively freeze them if you want deep immutability.
+
+
 # CSS
 console.log of css
 ```css

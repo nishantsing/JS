@@ -34,3 +34,47 @@ enum Direction{
 }
 
 console.log(Direction.top)
+
+
+interface User {
+    name: string;
+    number: string;
+
+}
+
+interface User {
+    age: number;
+    email: string;
+}
+
+interface NewUser extends User {
+    id:number
+}
+
+let user: NewUser = {
+    id:2,
+    name: "Nishant",
+    number: "980768950",
+    age: 26,
+    email: "abc@gmail.com",
+};
+
+
+class Earphones {
+    public name: string; // by default public and not required in js but requried to define type in ts
+    public price: number;
+    constructor(name: string, price: number) {
+        this.name = name;
+        this.price = price;
+    }
+}
+
+let e1 = new Earphones("Apple", 25000);
+console.log(e1);
+
+
+class Bottle{
+    constructor(public shape: string){
+        this.shape = shape;
+    }
+}
