@@ -23,6 +23,26 @@
 - compare and pull request
 - Title (Bug Fix: ), description
 
+#### Syncing the forked repo
+- Clone your fork (if not already done)
+git clone https://github.com/YOUR_USERNAME/YOUR_FORK.git
+cd YOUR_FORK
+
+- Add the upstream remote
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+
+- Fetch the latest changes from the upstream repository
+git fetch upstream
+
+- Switch to your main branch
+git checkout main
+
+- Merge the changes from the upstream repository into your local main branch
+git merge upstream/main
+
+- Push the changes to your GitHub fork
+git push origin main
+
 ## Power of JS
 - Threejs - 3D Visualization
 - React, Angular, Vue, Next - Web Development, PWA
