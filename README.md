@@ -24,12 +24,23 @@
 - Title (Bug Fix: ), description
 
 #### Syncing the forked repo
+- [Configuring a remote repository for a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork)
+- [Syncing a fork branch from the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
+  
 - Clone your fork (if not already done)
 git clone https://github.com/YOUR_USERNAME/YOUR_FORK.git
 cd YOUR_FORK
+git remote -v
+origin <your-fork-repo-url> (fetch)
+origin <your-fork-repo-url> (push)
 
 - Add the upstream remote
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote -v
+origin <your-fork-repo-url> (fetch)
+origin <your-fork-repo-url> (push)
+upstream  <oiginal-repo-url> (fetch)
+upstream <oiginal-repo-url> (push)
 
 - Fetch the latest changes from the upstream repository
 git fetch upstream
