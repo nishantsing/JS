@@ -3,6 +3,12 @@
 - codeium a tool similar to github copilot
 - [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
 
+## JS DSA
+- [Master the Basics | DSA with JavaScript | Part 1](https://youtu.be/h86FQ7vrnds)
+- [Understanding Conditionals | DSA with JavaScript | Part 2](https://youtu.be/S1wa0ojaJiw)
+- [Everything About Loops | DSA with JavaScript | Part 3](https://youtu.be/H88hkdA02tY)
+- [Mastering Arrays | DSA with JavaScript | Part 4](https://youtu.be/CW3gjRgL4w4)
+
 
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
