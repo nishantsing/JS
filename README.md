@@ -8,6 +8,8 @@
 - [Understanding Conditionals | DSA with JavaScript | Part 2](https://youtu.be/S1wa0ojaJiw)
 - [Everything About Loops | DSA with JavaScript | Part 3](https://youtu.be/H88hkdA02tY)
 - [Mastering Arrays | DSA with JavaScript | Part 4](https://youtu.be/CW3gjRgL4w4)
+- [Strings in JavaScript | DSA with JavaScript | Part 5](https://youtu.be/X8C4_oLQOzU)
+- [Mastering Advance Array Problems | DSA with JavaScript | Part 6](https://youtu.be/AaYggzBvD4Q)
 
 
 ## Searching Open source contribution
