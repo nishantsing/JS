@@ -10,6 +10,7 @@
 - [Mastering Arrays | DSA with JavaScript | Part 4](https://youtu.be/CW3gjRgL4w4)
 - [Strings in JavaScript | DSA with JavaScript | Part 5](https://youtu.be/X8C4_oLQOzU)
 - [Mastering Advance Array Problems | DSA with JavaScript | Part 6](https://youtu.be/AaYggzBvD4Q)
+- [Pattern Programming | DSA with JavaScript | Part 8](https://youtu.be/NaRPbIXRwhE)
 
 
 ## Searching Open source contribution
