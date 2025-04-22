@@ -3,6 +3,10 @@
 - codeium a tool similar to github copilot
 - [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
 
+
+## Concepts
+- [Why do we need JSON.stringify and parse?](https://youtu.be/E4FaVuGhDhk)
+
 ## JS DSA
 - [Master the Basics | DSA with JavaScript | Part 1](https://youtu.be/h86FQ7vrnds)
 - [Understanding Conditionals | DSA with JavaScript | Part 2](https://youtu.be/S1wa0ojaJiw)
