@@ -6,6 +6,7 @@
 
 ## Concepts
 - [Why do we need JSON.stringify and parse?](https://youtu.be/E4FaVuGhDhk)
+- [How to style console logs: Color and more!](https://youtu.be/01TC2LXFsac)         
 
 ## JS DSA
 - [Master the Basics | DSA with JavaScript | Part 1](https://youtu.be/h86FQ7vrnds)
