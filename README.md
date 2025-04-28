@@ -18,6 +18,7 @@
 - [Pattern Programming | DSA with JavaScript | Part 8](https://youtu.be/NaRPbIXRwhE)
 - [Sorting Algorithms | DSA with JavaScript | Part 9 | Bubble Sort , Selection Sort & Insertion Sort](https://youtu.be/r51jHrnjPxE)
 - [Recursion : Level - 1 | DSA with JavaScript | Part 10 | Stack Visualization](https://youtu.be/euOD2T7Yg7M)
+- [Binary Search Algorithm | DSA with JavaScript | Part 12 | Real-World Example](https://youtu.be/OPgervpLrzM)
 
 
 ## Searching Open source contribution
