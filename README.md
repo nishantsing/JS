@@ -20,6 +20,7 @@
 - [Recursion : Level - 1 | DSA with JavaScript | Part 10 | Stack Visualization](https://youtu.be/euOD2T7Yg7M)
 - [Binary Search Algorithm | DSA with JavaScript | Part 12 | Real-World Example](https://youtu.be/OPgervpLrzM)
 - [Merge Sort | DSA with JavaScript | Part 13 | Real-World Example](https://youtu.be/LSNVrTn5Ycw)
+- [Quick Sort | DSA with JavaScript | Part 14 | Real-World Example](https://youtu.be/Rl93i7I67NY)
 
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
