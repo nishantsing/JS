@@ -2,6 +2,7 @@
 
 - codeium a tool similar to github copilot
 - [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
+- [HTML, CSS & JavaScript Bootcamp - 10 HOURS & 15 PROJECTS ](https://youtu.be/kAiX0itnonM)
 
 
 ## Concepts
