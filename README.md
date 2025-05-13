@@ -24,6 +24,7 @@
 - [Quick Sort | DSA with JavaScript | Part 14 | Real-World Example](https://youtu.be/Rl93i7I67NY)
 - [Cyclic Sort | DSA with JavaScript | Part 15 | Missing Number | Find all the Number Disappeared](https://youtu.be/HmBOGkmp-xg)
 - [Search insert Position | Binary Search | DSA with JavaScript | Part 16](https://youtu.be/ZdfQVT4br80)
+- [Search in rotated Sorted array | BInary Search | DSA with JavaScript | Part 17](https://youtu.be/XOyYRkEEE_M)
 
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
