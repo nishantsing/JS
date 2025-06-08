@@ -25,6 +25,7 @@
 - [Cyclic Sort | DSA with JavaScript | Part 15 | Missing Number | Find all the Number Disappeared](https://youtu.be/HmBOGkmp-xg)
 - [Search insert Position | Binary Search | DSA with JavaScript | Part 16](https://youtu.be/ZdfQVT4br80)
 - [Search in rotated Sorted array | BInary Search | DSA with JavaScript | Part 17](https://youtu.be/XOyYRkEEE_M)
+- [Complete Hashing in 1 Video + MAANG Level Problems | DSA in JavaScript | Part 20](https://youtu.be/Z8iFL7d0f90)
 
 ## Searching Open source contribution
 - is:issue is:open label:"good first issue" language:JavaScript
