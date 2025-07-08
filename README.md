@@ -2,6 +2,7 @@
 
 - codeium a tool similar to github copilot
 - [JavaScript Full Course | JavaScript - Learn Everything | Sheryians Coding School](https://youtu.be/a-wVHL0lpb0)
+- [Part 2 – Master JavaScript & Become a Real Developer | Full Course](https://youtu.be/1aR7tcmWo_w)
 - [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
 - [HTML, CSS & JavaScript Bootcamp - 10 HOURS & 15 PROJECTS ](https://youtu.be/kAiX0itnonM)
 
@@ -12,7 +13,6 @@
 
 ## JS DSA
 - [Master the Basics | DSA with JavaScript | Part 1](https://youtu.be/h86FQ7vrnds)
-- [Part 2 – Master JavaScript & Become a Real Developer | Full Course](https://youtu.be/1aR7tcmWo_w)
 - [Understanding Conditionals | DSA with JavaScript | Part 2](https://youtu.be/S1wa0ojaJiw)
 - [Everything About Loops | DSA with JavaScript | Part 3](https://youtu.be/H88hkdA02tY)
 - [Mastering Arrays | DSA with JavaScript | Part 4](https://youtu.be/CW3gjRgL4w4)
