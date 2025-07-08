@@ -12,6 +12,7 @@
 
 ## JS DSA
 - [Master the Basics | DSA with JavaScript | Part 1](https://youtu.be/h86FQ7vrnds)
+- [Part 2 – Master JavaScript & Become a Real Developer | Full Course](https://youtu.be/1aR7tcmWo_w)
 - [Understanding Conditionals | DSA with JavaScript | Part 2](https://youtu.be/S1wa0ojaJiw)
 - [Everything About Loops | DSA with JavaScript | Part 3](https://youtu.be/H88hkdA02tY)
 - [Mastering Arrays | DSA with JavaScript | Part 4](https://youtu.be/CW3gjRgL4w4)
