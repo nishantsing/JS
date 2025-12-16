@@ -36,6 +36,7 @@
 - [Part 3 – Advanced JavaScript, Projects & Real Developer Mindset | Full Course](https://youtu.be/wH6uf20dpAo)
 - [Part 4 – JavaScript for Placements | Get Ready for Your First Developer Job](https://youtu.be/GVdBPJzmwQg)
 - [JS Finally Made Sense After This | JS Project 2 | Kanban Board](https://youtu.be/2aHJ-MKY1b0?list=PLbtI3_MArDOnNvk8CCCSR01CQ8B8iNh-A)
+- [JS Will Feel Easy With This Project | JS Project 3 | Image Editor](https://youtu.be/SjgTkATAuxw)
 - [Three.js Bootcamp: Zero to Mastery](https://zerotomastery.io/courses/learn-three-js/)
 - [HTML, CSS & JavaScript Bootcamp - 10 HOURS & 15 PROJECTS ](https://youtu.be/kAiX0itnonM)
 
